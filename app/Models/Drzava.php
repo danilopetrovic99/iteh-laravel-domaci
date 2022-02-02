@@ -10,6 +10,12 @@ class Drzava extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime',
+        'broj_stanovnika',
+        'predsednik'
+    ];
+
     public function zoo()
     {
         return $this->hasMany(Zoo::class);

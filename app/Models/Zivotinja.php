@@ -10,6 +10,13 @@ class Zivotinja extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime',
+        'tip',
+        'godine',
+        'zoo_id'
+    ];
+
     public function zoo()
     {
         return $this->belongsTo(Zoo::class);

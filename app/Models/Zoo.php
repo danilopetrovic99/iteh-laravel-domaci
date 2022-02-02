@@ -11,6 +11,12 @@ class Zoo extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime',
+        'adresa',
+        'drzava_id'
+    ];
+
     public function drzava()
     {
         return $this->belongsTo(Drzava::class);
